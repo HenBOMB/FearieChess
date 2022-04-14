@@ -2,9 +2,11 @@ const fs = require('fs');
 const express = require('express');
 const path = require('path');
 const app = express();
+const cors = require("cors");
 const port = 6969;
 
 app.use(express.static(path.join(__dirname, '')));
+app.use(cors());
 
 app.get('/configs', (_req, res) => {
     const files = fs.readdirSync('./configs/');
@@ -20,6 +22,7 @@ app.get('/configs', (_req, res) => {
     res.write(JSON.stringify({'configs' : files}));
     res.end();
 });
+
 
 app.get('/', function(_req, res) {
     res.redirect('index.html');

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/HenBOMB/FearieChess#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3",
     "jshint": "^2.13.4"
   }

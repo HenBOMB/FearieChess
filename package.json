@@ -1,0 +1,24 @@
+{
+  "name": "feariechess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenBOMB/FearieChess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenBOMB/FearieChess/issues"
+  },
+  "homepage": "https://github.com/HenBOMB/FearieChess#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jshint": "^2.13.4"
+  }
+}

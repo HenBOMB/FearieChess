@@ -1,0 +1,8 @@
+{
+    "pattern" : [[0,-1]],
+    "pattern_capture" : [[1, -1], [-1, -1]],
+    "repeat" : 1,
+    "repeat_capture" : 1,
+    "initials" : "p",
+    "value" : 1
+}

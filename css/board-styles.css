@@ -1,0 +1,147 @@
+:root {
+    --padding-top: 32px;
+}
+
+body.board-layout {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    /* margin-right: 16px; */
+    margin: 0px;
+    padding-top: var(--padding-top);
+}
+
+.board-layout-main {
+    align-items: flex-end;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.board-layout-chessboard {
+    position: relative;
+    box-sizing: inherit;
+    width: calc(100vh - var(--padding-top) * 2);
+    padding-bottom: 0px;
+}
+
+.board{
+    background-image: url("../images/board.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 5px;
+    user-select: none;
+}
+
+
+chess-board {
+    display: block;
+    padding-bottom: 100%; /* This replaces using the height as a value, height is 0px, this streatches it? lol tf*/
+    touch-action: none;
+}
+
+.piece {
+    background-size: 100%;
+    cursor: pointer;
+    cursor: grab;
+    cursor: -webkit-grab;
+    height: 12.5%;
+    width: 12.5%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    touch-action: none;
+    will-change: transform;
+}
+
+.board-layout-evaluation {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-30px);
+    width: 20px;
+}
+
+.evaluation-bar-bar {
+    border-radius: 0.2rem;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    width: 20px;
+}
+
+.evaluation-bar-bar .evaluation-bar-scoreAbbreviated.evaluation-bar-light {
+    color: #fff;
+    top: 0;
+}
+
+.evaluation-bar-bar .evaluation-bar-scoreAbbreviated.evaluation-bar-dark {
+    bottom: 0;
+    color: #403d39;
+}
+
+.evaluation-bar-bar .evaluation-bar-scoreAbbreviated {
+    font-size: 0.625rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: absolute;
+    text-align: center;
+    white-space: pre;
+    width: 100%;
+    z-index: 2;
+}
+
+.evaluation-bar-bar .evaluation-bar-score.evaluation-bar-light {
+    color: #fff;
+    top: 0;
+}
+
+.evaluation-bar-bar .evaluation-bar-score.evaluation-bar-dark {
+    bottom: 0;
+    color: #403d39;
+}
+
+.evaluation-bar-bar .evaluation-bar-score {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    padding: 0.5rem 0.2rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.evaluation-bar-bar .evaluation-bar-fill {
+    background-color: hsla(0,0%,100%,.05);
+    border-radius: 0.2rem;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+
+.evaluation-bar-bar .evaluation-bar-black {
+    background-color: #403d39;
+    z-index: 0;
+}
+
+.evaluation-bar-bar .evaluation-bar-color {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: transform 1s ease-in;
+    width: 100%;
+}
+
+.evaluation-bar-bar .evaluation-bar-white {
+    background-color: #fff;
+    z-index: 1;
+}

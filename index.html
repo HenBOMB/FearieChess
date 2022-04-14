@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/board-styles.css" rel="stylesheet">
+    <title>Faerie Chess</title>
+  </head>
+  <body class="board-layout" id="board-layout">
+    <script src="/scripts/renderer.js"></script>
+    <script src="/scripts/engine.js"></script>
+
+    <button class="button" id="btn_play" style="position:absolute; z-index: 10;">Play</button>
+    
+    <!-- <div class="board-layout-main" style="padding-inline-start: 37px;"> -->
+    <div class="board-layout-main">
+      <div class="board-layout-chessboard">
+        <div id="board-layout-evaluation" class="board-layout-evaluation">
+          <evaluation-bar board-id="board-vs-personalities" style="flex: 1 1 auto;">
+            <div class="evaluation-bar-bar">
+              <span class="evaluation-bar-scoreAbbreviated evaluation-bar-light">7.4</span>
+              <span class="evaluation-bar-score evaluation-bar-light ">-7.40</span>
+              <div class="evaluation-bar-fill">
+                <div class="evaluation-bar-color evaluation-bar-black"></div>
+                <div class="evaluation-bar-color evaluation-bar-white" style="transform: translate3d(0px, 95%, 0px);"></div>
+              </div>
+            </div>
+          </evaluation-bar>
+        </div>
+        <chess-board class="board" id="board">
+          <div class="highlight" id="highlight1" style="visibility:hidden;"></div>
+          <div class="highlight" id="highlight2" style="visibility:hidden;"></div>
+          <div class="highlight" id="highlight3" style="visibility:hidden;"></div>
+          <div class="hover-square" id="hover-square" style="visibility:hidden;"></div>
+        </chess-board>
+      </div>
+    </div>
+  </body>
+</html>
+<?PHP
+header('Access-Control-Allow-Origin: *');
+?>

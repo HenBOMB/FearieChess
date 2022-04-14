@@ -21,18 +21,12 @@ app.get('/configs', (_req, res) => {
     res.end();
 });
 
-// app.options('/', function(req, res, next){
-//     res.header('Access-Control-Allow-Origin', "*");
-//     res.header('Access-Control-Allow-Methods', 'POST');
-//     res.header("Access-Control-Allow-Headers", "accept, content-type");
-//     res.header("Access-Control-Max-Age", "1728000");
-//     return res.sendStatus(200);
-//  });
-
 app.get('/', function(_req, res) {
     res.redirect('index.html');
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Server running at http://localhost:${port}/`);
+    console.log(app.route)
+    console.log(app.defaultConfiguration)
 });

@@ -125,5 +125,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Custom
+
+engine/
+tsconfig
 .jshintrc
 *.txt
+*.key
+*.bat
+
+# Added by cargo
+
+/target

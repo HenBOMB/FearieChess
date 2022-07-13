@@ -10,8 +10,7 @@
   <body class="board-layout" id="board-layout">
     <script src="/scripts/renderer.js"></script>
     <script src="/scripts/engine.js"></script>
-
-    <button class="button" id="btn_play" style="position:absolute; z-index: 10;">Play</button>
+    <script src="/scripts/move.js"></script>
     
     <!-- <div class="board-layout-main" style="padding-inline-start: 37px;"> -->
     <div class="board-layout-main">
@@ -19,11 +18,11 @@
         <div id="board-layout-evaluation" class="board-layout-evaluation">
           <evaluation-bar board-id="board-vs-personalities" style="flex: 1 1 auto;">
             <div class="evaluation-bar-bar">
-              <span class="evaluation-bar-scoreAbbreviated evaluation-bar-light">7.4</span>
-              <span class="evaluation-bar-score evaluation-bar-light ">-7.40</span>
+              <span id="evaluation-bar-text" class="evaluation-bar-scoreAbbreviated evaluation-bar-dark">0</span>
+              <span class="evaluation-bar-score evaluation-bar-light">0</span>
               <div class="evaluation-bar-fill">
                 <div class="evaluation-bar-color evaluation-bar-black"></div>
-                <div class="evaluation-bar-color evaluation-bar-white" style="transform: translate3d(0px, 95%, 0px);"></div>
+                <div id="evaluation-bar" class="evaluation-bar-color evaluation-bar-white" style="transform: translate3d(0px, 50%, 0px);"></div>
               </div>
             </div>
           </evaluation-bar>
@@ -33,11 +32,14 @@
           <div class="highlight" id="highlight2" style="visibility:hidden;"></div>
           <div class="highlight" id="highlight3" style="visibility:hidden;"></div>
           <div class="hover-square" id="hover-square" style="visibility:hidden;"></div>
+          <div id="promotion-window" class="promotion-window" style="transform: translateX(100%); display: none;">
+            <img src="images/wq.png" class="promotion-piece" style="order: 0;"></img>
+            <img src="images/wb.png" class="promotion-piece" style="order: 3;"></img>
+            <img src="images/wn.png" class="promotion-piece" style="order: 2;"></img>
+            <img src="images/wr.png" class="promotion-piece" style="order: 1;"></img>
+          </div>
         </chess-board>
       </div>
     </div>
   </body>
 </html>
-<?PHP
-header('Access-Control-Allow-Origin: *');
-?>
